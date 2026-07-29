@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head><meta charset="utf-8"><title>실내 길안내</title></head>
+<body>
+  <h1>배포 성공</h1>
+  <p id="s">확인 중...</p>
+  <script>
+    fetch('/api/health').then(r => r.json())
+      .then(d => document.getElementById('s').textContent = 'API: ' + JSON.stringify(d));
+  </script>
+</body>
+</html>
